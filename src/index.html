@@ -4,9 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <title>Your tasks planner</title>
 </head>
 <body>
-    
+    <header class="header">
+        <h1 class="header__title">
+            <span id="user__info">Your</span> tasks planner
+        </h1>
+        <div class="logout">
+            <button class="button logout__btn" id="logout__btn">
+                Log out
+            </button>
+        </div>
+    </header>
+    <section class="authorization__error hidden" id="authorization__error">
+        <div class="authorization__error-message">
+            <div class="authorization__error-сlose">
+                X
+            </div>
+            <p class="authorization__error-message__text" id="authorization__error-message__text">Помилка</p>
+        </div>
+    </section>
+    <main>
+        <section class="forms__container" id="authorization">
+            <div class="forms__container-backup" id="forms__container-backup"></div>
+            <div class="form">
+                <button class="button form__login-btn__appear" id="form__login-btn__appear">
+                    Log in
+                </button>
+                <form class="form__item form__item-login" action="#" id="form__login">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input type="email" name="email" id="login__email">
+                    <label for="register__password">
+                        Password
+                    </label>
+                    <input type="password" name="password" id="login__password">
+                    <button type="submit" class="button form__item-submit__btn">
+                        submit
+                    </button>
+                </form>
+            </div>
+            <div class="form notactive">
+                <button class="button form__register-btn__appear" id="form__register-btn__appear">
+                    Register
+                </button>
+                <form class="form__item form__item-register" action="#" id="form__register">
+                    <label for="email">
+                        Email
+                    </label>
+                    <input type="email" name="email" id="register__email">
+                    <label for="register__name">
+                        Name
+                    </label>
+                    <input type="text" name="name" id="register__name">
+                    <label for="password">
+                        Password
+                    </label>
+                    <input type="password" name="password" id="register__password">
+                    <button type="submit" class="button form__item-submit__btn">
+                        submit
+                    </button>
+                </form>
+            </div>
+        </section >
+        <section class="tasks container" id="tasks">
+            <div class="task__adder task__card" >
+                <h3 class="task__adder-title">
+                    ADD TASK
+                </h3>
+                <form action="#" class="task__adder-form" id="task__adder-form">
+                    <label for="name">
+                        Name
+                    </label>
+                    <input type="text" name="name" id="task__name">
+                    <label for="description">
+                        Description
+                    </label>
+                    <input type="text" name="description" id="task__description">
+                    <button class="task__btn task__adder-submit" type="submit" >
+                        add
+                    </button>
+                </form>
+            </div>
+            <div class="tasks__wrapper" id="tasks__wrapper"></div>
+        </section>
+    </main>
 </body>
 </html>
